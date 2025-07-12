@@ -1,0 +1,19 @@
+<div id="rss-feed"></div>
+<script>
+  const rssUrl = 'https://cors-anywhere.herokuapp.com/https://dogewoz.tumblr.com/rss';
+
+  fetch(rssUrl)
+    .then(res => res.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+      const items = data.querySelectorAll("item");
+      let html = "<ul>";
+      items.forEach(el => {
+        const title = el.querySelector("title").textContent;
+        const link = el.querySelector("link").textContent;
+        html += `<li><a href="${link}">${title}</a></li>`;
+      });
+      html += "</ul>";
+      document.getElementById("rss-feed").innerHTML = html;
+    });
+</script>
