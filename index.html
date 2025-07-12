@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, p {
   <p style="font-family:Terminus" class="text-center">btw here is my 3DS Pretendo friend code! 4348-2549-5387</p>
     <p style="font-family:Terminus" class="text-center">anyways, this new homepage is still in the works.. so expect this to look a bit more different, and better.</p>
 	<p style="font-family:Terminus" class="text-center">i have just recently ported this website from neocities to github pages, so expect things to be off</p>
-	    
+	    <div id="visitor-counter"></div>
     <script>
   async function loadVisitorCounterIfNotEU() {
     try {
@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6, p {
         counterImage.border = "0";
 
         counterLink.appendChild(counterImage);
-        document.body.appendChild(counterLink);
+        document.getElementById('visitor-counter').appendChild(counterLink);
       } else {
         console.log("Visitor is from the EU. Counter not loaded.");
       }
