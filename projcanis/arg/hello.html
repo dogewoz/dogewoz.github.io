@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT CANIS</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/psi.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="dogewoz.png">
+        <script>
+        // Function to generate random "glitchy" text
+        function getRandomTitle() {
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+            let randomTitle = '';
+            for (let i = 0; i < 10; i++) {
+                randomTitle += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return randomTitle;
+        }
+
+        // Function to start the "corruption" effect
+        function corruptTitle() {
+            // Save the original title to restore later
+            const originalTitle = document.title;
+
+            // Set an interval to rapidly change the title
+            const intervalId = setInterval(function() {
+                // Randomly alternate between glitchy title and the original
+                document.title = Math.random() > 0.5 ? getRandomTitle() : originalTitle;
+            }, 5); // Changes the title every 100 milliseconds
+
+            // Stop the corruption after a certain period (e.g., 5 seconds)
+            setTimeout(function() {
+                clearInterval(intervalId);
+                document.title = originalTitle; // Restore original title
+            }, 960000000); // Duration
+        }
+
+        // Start the title corruption when the page loads
+        window.onload = corruptTitle;
+    </script>
+  </head>
+  <body>
+  <script>
+  alert("Hello. Your effort to find me has not gone unnoticed.")
+  alert("But this isn't the end.")
+  alert("Not yet at least.")
+  alert("You better expect me soon.")
+  alert("OUR FIGHT WILL TRULY BE LEGENDARY.")
+  alert("But until then...")
+  alert("I'll be waiting~")
+  </script>
+  
+  
+<div class="terminal">
+    <div class="output" id="terminalOutput">
+        <p> </p>
+    </div>
+    <div class="prompt">
+        <span>&gt;</span> <input type="text" id="commandInput" autofocus autocomplete="off" />
+    </div>
+</div>
+
+<script>
+    // Predefined list of valid commands
+    const validCommands = {
+        "help": "Available commands: help, info, rid1, quit",
+        "info": " ",
+        "rid1": "I have four legs but I'm not a chair, I have a tail but I'm not a mouse, who am I?",
+        "dog": "twpcboqqw.html",
+        "quit": " "
+    };
+
+    const terminalOutput = document.getElementById("terminalOutput");
+    const commandInput = document.getElementById("commandInput");
+
+    // Function to handle user input
+    commandInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            const inputValue = commandInput.value.trim().toLowerCase();
+            handleCommand(inputValue);
+            commandInput.value = "";  // Clear input after enter
+        }
+    });
+
+    // Function to handle and process the command
+    function handleCommand(command) {
+        // Append user input to the terminal
+        terminalOutput.innerHTML += `<p>&gt; ${command}</p>`;
+
+        // Check if command exists in the predefined list
+        if (validCommands[command]) {
+            terminalOutput.innerHTML += `<p>${validCommands[command]}</p>`;
+            
+            // Check if the 'quit' command is entered
+            if (command === "quit") {
+                // Attempt to close the window/tab
+                setTimeout(function() {
+                    window.close();
+                }, 10);
+            }
+
+        } else {
+            terminalOutput.innerHTML += `<p>Unknown command. Type 'help' for available commands.</p>`;
+        }
+
+        // Scroll to the bottom of the output after input
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+</script>
+
+  </body>

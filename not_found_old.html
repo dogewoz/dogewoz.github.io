@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bad page!!1!!1!</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="dogewoz.png">
+  </head>
+  <body>
+    <h1>ahh... haha! you found the secret webpage!! just kidding its the fucking 404 error page u dimwit</h1>
+    <input type="button" value="Clear canvas" />
+    <input type="button" onclick="window.location.href='https://dogewoz.neocities.org/index.html';" value="go back" />
+    
+    <h2>here's a canvas as a reward. send me your drawings at dogewoz@hotmail.com</h2>
+    <h3>i <del>stole</del> borrowed this from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button">this cool website</a></h3>
+    
+    <div class="toolbar">
+  <input type="color" aria-label="select pen color" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="select pen size" /><span class="output">30</span>
+</div>
+
+<canvas class="myCanvas">
+  <p>Add suitable fallback here.</p>
+</canvas>
+    
+    <script>
+    const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight - 85);
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "rgb(255,255,255)";
+ctx.fillRect(0, 0, width, height);
+
+const colorPicker = document.querySelector('input[type="color"]');
+const sizePicker = document.querySelector('input[type="range"]');
+const output = document.querySelector(".output");
+const clearBtn = document.querySelector('input[type="button"]');
+
+// covert degrees to radians
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+// update sizepicker output value
+
+sizePicker.oninput = () => {
+  output.textContent = sizePicker.value;
+};
+
+// store mouse pointer coordinates, and whether the button is pressed
+let curX;
+let curY;
+let pressed = false;
+
+// update mouse pointer coordinates
+document.onmousemove = (e) => {
+  curX = e.pageX;
+  curY = e.pageY;
+};
+
+canvas.onmousedown = () => {
+  pressed = true;
+};
+
+canvas.onmouseup = () => {
+  pressed = false;
+};
+
+clearBtn.onclick = () => {
+  ctx.fillStyle = "rgb(255,255,255)";
+  ctx.fillRect(0, 0, width, height);
+};
+
+function draw() {
+  if (pressed) {
+    ctx.fillStyle = colorPicker.value;
+    ctx.beginPath();
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
+    ctx.fill();
+  }
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+  </body>
+</html>

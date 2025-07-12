@@ -10,10 +10,7 @@
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-         
-    <!-- Metro UI -->
- <!--   <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
-    <style>
+<style>
     
     body {
   background-color: #000;
@@ -161,22 +158,10 @@ h6.outset {border-style: outset;}
       margin: 5px 0;
     }
     
-    /* Blur & Dim Effect */
-.aero-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Darkens the background slightly */
-    backdrop-filter: blur(5px); /* Adjust blur intensity */
-    z-index: -1; /* Ensures it stays in the background */
-}
 
 /* Content Box */
 .container {
     background: rgba(255, 255, 255, 0.1); /* Slight transparency */
-    backdrop-filter: blur(13px); /* Glass effect */
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 20px;
@@ -219,8 +204,6 @@ h1, h2, h3, h4, h5, h6, p {
       display: none;
       position: absolute;
       background: rgba(255, 255, 255, 0.2); /* Slight transparency */
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 8px;
       padding: 8px;
@@ -244,7 +227,7 @@ h1, h2, h3, h4, h5, h6, p {
 </style>
   </head>
   <body>
-    <script>
+        <script>
   function toggleNav() {
     const sidenav = document.getElementById('sidenav');
     if (sidenav.style.width === '180px') {
@@ -257,99 +240,23 @@ h1, h2, h3, h4, h5, h6, p {
   }
 </script>
 
-    
-    
-    
-    <div class="hamburger" onclick="toggleNav()">☰</div>
-  <div class="sidenav" id="sidenav">
-  <a href="index"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">homepage</p></a>
-  <a href="about"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">about meh</p></a>
-  <a href="projects"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">projects</p></a>
- <a href="/artworks"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">artworks</p></a>
-</div>
-<div class="main">
-            <div class="aero-overlay"></div>
-    <div class="container">
-    <h1 style="font-family:Terminus" class="text-center">dogewoz's information superhighway web-site</h1>
-    <p style="font-family:Terminus" class="text-center">this is a cool looking redesign of my site!!</p>
-    <p style="font-family:VCR OSD Mono" class="text-center">also dont worry the cool looking VHS font isn't really going anywhere anytime soon ;)</p>
-    <p style="font-family:VCR OSD Mono" class="text-center">it'll be in other places on my site, but for most of the site, you'll see dat beautiful terminus font</p>
-    
-  <p style="font-family:Terminus" class="text-center">btw here is my 3DS Pretendo friend code! 4348-2549-5387</p>
-    <p style="font-family:Terminus" class="text-center">anyways, this new homepage is still in the works.. so expect this to look a bit more different, and better.</p>
-    <h4 style="font-family:Terminus" class="text-center"><strong>i hate bees.</strong></h4>
-    <div id="pst-time" style="font-family:Terminus"></div>
-      <script>
-    function updatePSTTime() {
-      const options = {
-        timeZone: 'America/Los_Angeles', // PST/PDT with DST adjustment
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: true,
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      };
-
-      const now = new Date();
-      const formatter = new Intl.DateTimeFormat('en-US', options);
-      const pstTime = formatter.format(now);
-
-      document.getElementById('pst-time').textContent = `Here's what time it is for meh: ${pstTime}`;
-    }
-
-    // Update immediately and every second
-    updatePSTTime();
-    setInterval(updatePSTTime, 1000);
-  </script>
-    <br>
-    <br>
-    <br>
-
-<iframe src="https://dogewoz.github.io/rssget.html" width="100%" height="400" frameborder="0"></iframe>
 
 
+    <center><img src="not the father.png"></center>
+    <center><img src="not the father 2.png"></center>
+    <center><img src="confirmation from niko.png"></center>
+    <center><img src="confirmation from niko 2.png"></center>
+    <center><img src="confirmation from niko 3.png"></center>
+    <h1 style="font-family:Terminus; text-color:fff"><center>Not the father!!!</center></h1>
+    <p style="font-family:Terminus; text-color:transparent"><center>context: this guy claims he is niko oneshot's father, and we dont think so so i did all this to epic troll him lol</center></p>
+    <p style="font-family:Terminus; text-color:transparent"><center>in other news : play oneshot NOW. it is PEAK</center></p>
+    <p style="font-family:Terminus; text-color:transparent"><center>and obviously plz do not harass abdul aziz its supposed to be casual trolling not a hate campaign</center></p>
     
     
     
-    
-<center>
-
-  <div class="dropdown-container">
-    <button style="font-family:VCR OSD Mono" class="dropdown-button" onclick="toggleDropdown()">see mah buttons</button>
-    <div id="dropdownContent" class="dropdown-content">
-  <!-- Add GIFs here -->
-  <img src="https://cyber.dabamos.de/88x31/ieanime2.gif">
-  <img src="https://cyber.dabamos.de/88x31/neocities_made.gif">
-  <img src="https://cyber.dabamos.de/88x31/ddg.gif">
-  <!-- <img src="https://cyber.dabamos.de/88x31/nocookie.gif"> -->
-  <img src="https://cyber.dabamos.de/88x31/noerror.gif">
-    </div>
-  </div>
-</center>
-  <script>
-  function toggleDropdown() {
-    var dropdown = document.getElementById("dropdownContent");
-    
-    if (dropdown.style.display === "block") {
-      dropdown.style.opacity = 0; // Start fade-out
-      setTimeout(function() {
-        dropdown.style.display = "none"; // Hide element after fading out
-      }, 300); // Fade-out duration (same as transition time)
-    } else {
-      dropdown.style.display = "block"; // Make the element visible
-      setTimeout(function() {
-        dropdown.style.opacity = 1; // Start fade-in
-      }, 10); // Small delay to trigger transition
-    }
-  }
-  </script>
-
-    <!-- Metro UI -->
-    <script src="/metro.js"></script>
-    </div>
-    </div>
+      <center><a href="index"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">homepage</p></a></center>
+  <center><a href="about"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">about meh</p></a></center>
+  <center><a href="projects"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">projects</p></a></center>
+ <center><a href="/artworks"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">artworks</p></a></center>
   </body>
 </html>

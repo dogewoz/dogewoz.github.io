@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<title>dogewoz's information superhighway web-site</title>
+        <link rel="icon" type="image/x-icon" href="dogewoz.png">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+         
+    <!-- Metro UI -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css">
+        <style>
+body {
+  background-color: #000;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #300D1A;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFDE29;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FFFFFF;
+}
+
+.main {
+  margin-left: 180px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: #FFDE29;
+  cursor: pointer;
+  z-index: 2;
+}
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('fonts/VCR OSD Mono.woff2') format('woff2'),
+       url('fonts/VCR OSD Mono.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Terminus';
+  src: url('fonts/Terminus.woff2') format('woff2'),
+       url('fonts/Terminus.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 0;
+    padding-top: 0;
+  }
+  .sidenav a {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+body {
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+}
+
+p.outset {border-style: outset;}
+h1.outset {border-style: outset;}
+h2.outset {border-style: outset;}
+h3.outset {border-style: outset;}
+h4.outset {border-style: outset;}
+h5.outset {border-style: outset;}
+h6.outset {border-style: outset;}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Blur & Dim Effect */
+.aero-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darkens the background slightly */
+    backdrop-filter: blur(5px); /* Adjust blur intensity */
+    z-index: -1; /* Ensures it stays in the background */
+}
+
+/* Content Box */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    backdrop-filter: blur(13px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Adding a soft text shadow */
+h1, h2, h3, h4, h5, h6, p {
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+}
+</style>
+</head>
+  <body>
+    
+        
+    <script>
+  function toggleNav() {
+    const sidenav = document.getElementById('sidenav');
+    if (sidenav.style.width === '180px') {
+      sidenav.style.width = '0';
+      document.querySelector('.main').style.marginLeft = '0';
+    } else {
+      sidenav.style.width = '180px';
+      document.querySelector('.main').style.marginLeft = '180px';
+    }
+  }
+</script>
+
+    
+    
+    
+    <div class="hamburger" onclick="toggleNav()">☰</div>
+  <div class="sidenav" id="sidenav">
+  <a href="index"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">homepage</p></a>
+  <a href="about"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">about meh</p></a>
+  <a href="projects"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">projects</p></a>
+    <a href="/artworks"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">artworks</p></a>
+</div>
+  <div class="main">
+              <div class="aero-overlay"></div>
+    <div class="container">
+    <h1 style="font-family:Terminus" class="text-center">about mehhh :PP</h1>
+     <h6 style="font-family:Terminus" class="text-center">im just some bored nerd on the internet</h6>
+    <br>
+     <h6 style="font-family:Terminus" class="text-center">i also work on this shitty as hell animation channel, where i draw dogs being really stupid in the style of a flash animation lol</h6>
+      <h6 style="font-family:Terminus" class="text-center">worked on a shit oneshot fangame, and i don't really look back on it, but i don't outright hate it. i'm mixed about it</h6>
+      <br>
+      <br>
+      <br>
+      <h6 style="font-family:Terminus" class="text-center">if ya want to, email me your complaints, cease and desist letters, advice, or really anything (except anything illegal or so) dogewoz@hotmail.com</h6>
+      
+      
+      <h4 style="font-family:Terminus" class="text-center">Here's my Neofetch shit: (i'm not a full-time linux bro, i use windows too ya know)</h4>
+      
+      
+            <pre><font color="#FF5555"><b>                     ./</b></font><font color="#FF55FF"><b>o</b></font><font color="#5555FF"><b>.</b></font>                  <font color="#FF5555"><b> </b></font> <font color="#FF5555"><b> </b></font> 
+<font color="#FF5555"><b>                   ./</b></font><font color="#FF55FF"><b>sssso</b></font><font color="#5555FF"><b>-</b></font>                ------------------- 
+<font color="#FF5555"><b>                 `:</b></font><font color="#FF55FF"><b>osssssss+</b></font><font color="#5555FF"><b>-</b></font>              <font color="#FF55FF"><b>OS</b></font>: EndeavourOS Linux x86_64 
+<font color="#FF5555"><b>               `:+</b></font><font color="#FF55FF"><b>sssssssssso</b></font><font color="#5555FF"><b>/.</b></font>            <font color="#FF55FF"><b>Host</b></font>: F0EA003RUS ideacentre A340-22IGM 
+<font color="#FF5555"><b>             `-/o</b></font><font color="#FF55FF"><b>ssssssssssssso</b></font><font color="#5555FF"><b>/.</b></font>          <font color="#FF55FF"><b>Kernel</b></font>: 6.14.1-arch1-1 
+<font color="#FF5555"><b>           `-/+</b></font><font color="#FF55FF"><b>sssssssssssssssso</b></font><font color="#5555FF"><b>+:`</b></font>        <font color="#FF55FF"><b>Uptime</b></font>: 3 hours, 17 mins 
+<font color="#FF5555"><b>         `-:/+</b></font><font color="#FF55FF"><b>sssssssssssssssssso</b></font><font color="#5555FF"><b>+/.</b></font>       <font color="#FF55FF"><b>Packages</b></font>: 1202 (pacman), 9 (flatpak) 
+<font color="#FF5555"><b>       `.://o</b></font><font color="#FF55FF"><b>sssssssssssssssssssso</b></font><font color="#5555FF"><b>++-</b></font>      <font color="#FF55FF"><b>Shell</b></font>: bash 5.2.37 
+<font color="#FF5555"><b>      .://+</b></font><font color="#FF55FF"><b>ssssssssssssssssssssssso</b></font><font color="#5555FF"><b>++:</b></font>     <font color="#FF55FF"><b>Resolution</b></font>: 1366x1024 
+<font color="#FF5555"><b>    .:///o</b></font><font color="#FF55FF"><b>ssssssssssssssssssssssssso</b></font><font color="#5555FF"><b>++:</b></font>    <font color="#FF55FF"><b>DE</b></font>: Xfce 4.20 
+<font color="#FF5555"><b>  `:////</b></font><font color="#FF55FF"><b>ssssssssssssssssssssssssssso</b></font><font color="#5555FF"><b>+++.</b></font>   <font color="#FF55FF"><b>WM</b></font>: Xfwm4 
+<font color="#FF5555"><b>`-////+</b></font><font color="#FF55FF"><b>ssssssssssssssssssssssssssso</b></font><font color="#5555FF"><b>++++-</b></font>   <font color="#FF55FF"><b>WM Theme</b></font>: TWM-theme 
+<font color="#FF5555"><b> `..-+</b></font><font color="#FF55FF"><b>oosssssssssssssssssssssssso</b></font><font color="#5555FF"><b>+++++/`</b></font>   <font color="#FF55FF"><b>Theme</b></font>: TWM-theme [GTK2], Breeze [GTK3] 
+<font color="#5555FF"><b>   ./++++++++++++++++++++++++++++++/:.</b></font>     <font color="#FF55FF"><b>Icons</b></font>: TWM-icons [GTK2], breeze-dark [GTK3] 
+<font color="#5555FF"><b>  `:::::::::::::::::::::::::------``</b></font>       <font color="#FF55FF"><b>Terminal</b></font>: xfce4-terminal 
+                                           <font color="#FF55FF"><b>Terminal Font</b></font>: Monospace 12 
+                                           <font color="#FF55FF"><b>CPU</b></font>: Intel Pentium Silver J5005 (4) @ 2.800GHz 
+                                           <font color="#FF55FF"><b>GPU</b></font>: Intel GeminiLake [UHD Graphics 605] 
+                                           <font color="#FF55FF"><b>Memory</b></font>: 4972MiB / 7750MiB 
+
+                                           <span style="background-color:#000000"><font color="#000000">   </font></span><span style="background-color:#AA0000"><font color="#AA0000">   </font></span><span style="background-color:#00AA00"><font color="#00AA00">   </font></span><span style="background-color:#AA5500"><font color="#AA5500">   </font></span><span style="background-color:#0000AA"><font color="#0000AA">   </font></span><span style="background-color:#AA00AA"><font color="#AA00AA">   </font></span><span style="background-color:#00AAAA"><font color="#00AAAA">   </font></span><span style="background-color:#AAAAAA"><font color="#AAAAAA">   </font></span>
+                                           <span style="background-color:#555555"><font color="#555555">   </font></span><span style="background-color:#FF5555"><font color="#FF5555">   </font></span><span style="background-color:#55FF55"><font color="#55FF55">   </font></span><span style="background-color:#FFFF55"><font color="#FFFF55">   </font></span><span style="background-color:#5555FF"><font color="#5555FF">   </font></span><span style="background-color:#FF55FF"><font color="#FF55FF">   </font></span><span style="background-color:#55FFFF"><font color="#55FFFF">   </font></span><span style="background-color:#FFFFFF"><font color="#FFFFFF">   </font></span>
+
+</pre>
+
+<h6 style="font-family:Terminus" class="text-center">linux sweats need to take a free and open source shower ngl.....</h6>
+      </div>
+      </div>
+      
+
+  </body>
+</html>

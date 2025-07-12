@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/psi.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="dogewoz.png">
+    <style>
+    p, h1 {
+    color: white;
+    font-size:60px;
+    }
+    </style>
+  </head>
+  <body>
+  <div class="crt">
+  <h1>TRANSMISSION LOG 02-10-1997 22:10:10</h1>
+  <button onclick="typeWriter()"> </button>
+  <p id="transmission" style="font-size: 800;"></p>
+  
+  
+  
+  
+  
+    <script>var i = 0;
+var txt = 'IT IS HAPPENING. THE ENTITY IS LOSING SIGHT OF THE QUARTET INDIVIDUALS. WE ARE ALL AFRAID THAT THIS MONGREL WILL LEAD THE YOUNGINS TO THEIR UNTIMELY DOOM. SOMETHING HAS TO BE DONE TO STOP HIM, AND SAVE OUR BELOVED FELINE FRIEND... AND ALSO THE BIRD SIBLINGS TOO. 27. IF YOU SEE THIS, THIS IS 04. QUICKLY DECRYPT AND PUNCH IN THE CODE I WILL PROVIDE YOU NOW. THE CODE IS MjQxMTk5NjQ=. SAVE OUR PRECIOUS FRAGILE FRIENDS.'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("transmission").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+    </div>
+  </body>
+</html>

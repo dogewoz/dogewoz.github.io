@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<title>dogewoz's information superhighway web-site</title>
+        <link rel="icon" type="image/x-icon" href="dogewoz.png">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+         
+    <!-- Metro UI -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css">
+    <style>
+    body {
+  background-color: #000;
+}
+    
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #300D1A;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFDE29;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FFFFFF;
+}
+
+.main {
+  margin-left: 180px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: #FFDE29;
+  cursor: pointer;
+  z-index: 2;
+}
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('fonts/VCR OSD Mono.woff2') format('woff2'),
+       url('fonts/VCR OSD Mono.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Terminus';
+  src: url('fonts/Terminus.woff2') format('woff2'),
+       url('fonts/Terminus.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 0;
+    padding-top: 0;
+  }
+  .sidenav a {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+body {
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+}
+
+p.outset {border-style: outset;}
+h1.outset {border-style: outset;}
+h2.outset {border-style: outset;}
+h3.outset {border-style: outset;}
+h4.outset {border-style: outset;}
+h5.outset {border-style: outset;}
+h6.outset {border-style: outset;}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+    canvas {
+      border: 2px solid #000;
+      cursor: crosshair;
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+
+/* Blur & Dim Effect */
+.aero-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darkens the background slightly */
+    backdrop-filter: blur(5px); /* Adjust blur intensity */
+    z-index: -1; /* Ensures it stays in the background */
+}
+
+/* Content Box */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    backdrop-filter: blur(13px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Adding a soft text shadow */
+h1, h2, h3, h4, h5, h6, p {
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+}
+
+
+</style>
+
+
+</head>
+  <body>
+
+    
+    <script>
+  function toggleNav() {
+    const sidenav = document.getElementById('sidenav');
+    if (sidenav.style.width === '180px') {
+      sidenav.style.width = '0';
+      document.querySelector('.main').style.marginLeft = '0';
+    } else {
+      sidenav.style.width = '180px';
+      document.querySelector('.main').style.marginLeft = '180px';
+    }
+  }
+</script>
+
+
+    <div class="hamburger" onclick="toggleNav()">☰</div>
+  <div class="sidenav" id="sidenav">
+  <a href="/index"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">homepage</p></a>
+  <a href="/about"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">about meh</p></a>
+  <a href="/projects"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">projects</p></a>
+    <a href="/artworks"><p style="font-family:VCR OSD Mono; text-color:fff" class="text-center">artworks</p></a>
+</div>
+<div class="main">
+          <div class="aero-overlay"></div>
+    <div class="container">
+  
+<h1 style="font-family:VCR OSD Mono; text-color:fff" class="text-center">If you somehow ended up here, this is where I test code. So there's nothing special here.</h1>
+
+
+<h3 style="font-family:VCR OSD Mono; text-color:fff" class="text-center">Testing grounds start below.</h3>
+
+<br>
+<br>
+
+<!-- Audio Player code starts here -->
+<center>
+<h4 style="font-family:Terminus; text-color:fff" class="text-center">Manual Audio Player</h4>
+<h6 style="font-family:Terminus; text-color:fff" class="text-center">This only supports URLs!!!</h6>
+  <input type="text" id="audioURL" placeholder="Enter audio URL" size="50">
+  <button id="loadAudio">Load Audio</button>
+  <br><br>
+  <button id="playButton">Play</button>
+  <button id="pauseButton">Pause</button>
+  <button id="stopButton">Stop</button>
+  <button id="downloadButton">Go to Link</button>
+    <button id="loopButton">Loop OFF</button>
+
+  <audio id="audioPlayer"></audio>
+
+  <script>
+    const audioPlayer = document.getElementById("audioPlayer");
+    const loopButton = document.getElementById("loopButton");
+    const downloadButton = document.getElementById("downloadButton");
+    // Load new audio URL
+    document.getElementById("loadAudio").addEventListener("click", function() {
+      const url = document.getElementById("audioURL").value;
+      if (url) {
+        audioPlayer.src = url;
+        alert("Audio loaded successfully!");
+      } else {
+        alert("Please enter a valid URL.");
+      }
+    });
+
+    // Play audio
+    document.getElementById("playButton").addEventListener("click", function() {
+      audioPlayer.play();
+    });
+
+    // Pause audio
+    document.getElementById("pauseButton").addEventListener("click", function() {
+      audioPlayer.pause();
+    });
+
+    // Stop audio
+    document.getElementById("stopButton").addEventListener("click", function() {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+    });
+    
+        // Toggle looping
+    let isLooping = false; // Keep track of the loop state
+    loopButton.addEventListener("click", function() {
+      isLooping = !isLooping; // Toggle loop state
+      audioPlayer.loop = isLooping; // Set the audio's loop property
+      loopButton.textContent = isLooping ? "Loop ON" : "Loop OFF"; // Update button text
+    });
+    
+        // Download audio
+    downloadButton.addEventListener("click", function() {
+      const url = document.getElementById("audioURL").value;
+      if (url) {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "audio.mp3"; // Default filename
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } else {
+        alert("error");
+      }
+    });
+  </script>
+<!-- Audio Player code ends here -->
+<br>
+<br>
+
+<!-- Useragent and IP code starts here -->
+
+<h4 style="font-family:Terminus; text-color:fff" class="text-center">I know your Useragent.</h4>
+<h6 style="font-family:Terminus; text-color:fff" class="text-center">OK, not really, but most websites out there do pick up on your Useragent. It's how stuff changes when you're on computer and when you're on a phone. Sometimes.</h6>
+
+  
+    <div id="info"></div>
+
+    <script>
+        function getOS() {
+            let userAgent = navigator.userAgent;
+            let os = "Unknown OS";
+
+            // Some Windows versions
+            if (userAgent.includes("Windows NT 10.0")) os = "Windows 10 (No, Windows 11 doesn't count.)";
+            else if (userAgent.includes("Windows NT 6.3")) os = "Windows 8 (Techincally, Microsoft treats Windows 8.1 as a service pack.)";
+            else if (userAgent.includes("Windows NT 6.2")) os = "Windows 8";
+            else if (userAgent.includes("Windows NT 6.1")) os = "Windows 7";
+            else if (userAgent.includes("Windows NT 6.0")) os = "Windows Vista";
+            else if (userAgent.includes("Windows NT 5.2")) os = "Windows XP x64 Edition, or Windows Server 2003";
+            else if (userAgent.includes("Windows NT 5.1")) os = "Windows XP";
+            else if (userAgent.includes("Windows NT 5.0")) os = "Windows 2000";
+            
+            // Consoles, because why not
+            else if (userAgent.includes("Nintendo Wii")) os = "Nintendo Wii";
+            else if (userAgent.includes("Nintendo WiiU")) os = "Nintendo Wii U";
+            else if (userAgent.includes("Nintendo Switch")) os = "Nintendo Switch";
+            else if (userAgent.includes("Nintendo 3DS") || userAgent.includes("New Nintendo 3DS")) os = "Nintendo 3DS";
+            else if (userAgent.includes("PlayStation 5")) os = "PlayStation 5";
+            else if (userAgent.includes("PlayStation 4")) os = "PlayStation 4";
+            else if (userAgent.includes("PlayStation 3")) os = "PlayStation 3";
+            else if (userAgent.includes("PlayStation Vita")) os = "PlayStation Vita";
+            else if (userAgent.includes("Xbox One")) os = "Xbox One";
+            else if (userAgent.includes("Xbox Series")) os = "Xbox Series X/S";
+            else if (userAgent.includes("Xbox 360")) os = "Xbox 360";
+            
+            // 9x Windows for laughs
+            else if (userAgent.includes("Windows 98")) os = "Windows 98";
+            else if (userAgent.includes("Windows 95")) os = "Windows 95";
+            else if (userAgent.includes("Windows ME")) os = "Windows ME, the Mistake Edition.";
+            
+            // Other platforms
+            else if (userAgent.includes("Mac OS X")) os = "macOS";
+            else if (userAgent.includes("CrOS")) os = "ChromeOS";
+            else if (userAgent.includes("Linux")) {
+                if (userAgent.includes("Ubuntu")) os = "Ubuntu Linux";
+                else if (userAgent.includes("Arch")) os = "Arch Linux (I use Arch, btw)";
+                else if (userAgent.includes("Fedora")) os = "Fedora Linux";
+                else if (userAgent.includes("Debian")) os = "Debian Linux";
+                else os = "Linux (erm actually it's GNU/Linux)";
+            }
+            
+            // Mobile OS detection
+            else if (userAgent.includes("Android")) {
+                let match = userAgent.match(/Android (\d+(\.\d+)?)/);
+                os = match ? `Android ${match[1]}` : "Android";
+            }
+            else if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
+                let match = userAgent.match(/OS (\d+_\d+)/);
+                os = match ? `iOS ${match[1].replace("_", ".")}` : "iOS";
+            }
+
+            // Obsolete mobile OS
+            else if (userAgent.includes("Windows Phone")) os = "Windows Phone (RIP)";
+            else if (userAgent.includes("PalmOS")) os = "PalmOS";
+            else if (userAgent.includes("BlackBerry")) os = "BlackBerry OS";
+            
+            return os;
+        }
+
+        function getBrowser() {
+            let userAgent = navigator.userAgent;
+            let browser = "Unknown Browser";
+
+            if (userAgent.includes("Chrome") && !userAgent.includes("Chromium")) browser = "Google Chrome";
+            else if (userAgent.includes("Chromium")) browser = "Chromium";
+            else if (userAgent.includes("Firefox")) browser = "Mozilla Firefox";
+            else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) browser = "Apple Safari";
+            else if (userAgent.includes("MSIE") || userAgent.includes("Trident")) browser = "Internet Explorer";
+            else if (userAgent.includes("Edg")) browser = "Microsoft Edge";
+            else if (userAgent.includes("OPR") || userAgent.includes("Opera")) browser = "Opera";
+
+            return browser;
+        }
+
+        document.getElementById("info").innerHTML = `
+            <strong>Operating System:</strong> ${getOS()} <br>
+            <strong>Browser:</strong> ${getBrowser()} <br>
+            <strong>User-Agent String:</strong> ${navigator.userAgent}
+        `;
+    </script>
+  <!-- Useragent and IP code ends here -->
+  <br>
+  <br>
+
+<!-- Canvas code starts here -->
+<h4 style="font-family:Terminus; text-color:fff" class="text-center">Drawing.</h4>
+  <canvas id="drawingCanvas" width="640" height="480"></canvas>
+  <div class="controls">
+    <!-- Stroke Color -->
+    <label for="strokeColor">Stroke Color:</label>
+    <input type="color" id="strokeColor" value="#000000">
+
+    <!-- Background Color -->
+    <label for="bgColor">Background Color:</label>
+    <input type="color" id="bgColor" value="#ffffff">
+
+    <!-- Save and Clear Buttons -->
+    <button id="saveButton">Save as Image</button>
+    <button id="clearButton">Clear Canvas</button>
+  </div>
+
+  <script>
+    // Get canvas and context
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Variables for drawing
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    let strokeColor = '#000000'; // Default stroke color
+    let bgColor = '#ffffff'; // Default background color
+
+    // Set the initial background color
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Handle drawing
+    canvas.addEventListener('mousedown', (e) => {
+      isDrawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (!isDrawing) return;
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.strokeStyle = strokeColor;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    // Save the canvas as an image
+    const saveButton = document.getElementById('saveButton');
+    saveButton.addEventListener('click', () => {
+      const dataURL = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = dataURL;
+      link.download = 'drawing.png';
+      link.click();
+    });
+
+    // Clear the canvas
+    const clearButton = document.getElementById('clearButton');
+    clearButton.addEventListener('click', () => {
+      ctx.fillStyle = bgColor; // Use the current background color
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    });
+
+    // Update the stroke color when the user selects a new color
+    const strokeColorPicker = document.getElementById('strokeColor');
+    strokeColorPicker.addEventListener('input', (e) => {
+      strokeColor = e.target.value;
+    });
+
+    // Update the background color when the user selects a new color
+    const bgColorPicker = document.getElementById('bgColor');
+    bgColorPicker.addEventListener('input', (e) => {
+      bgColor = e.target.value;
+
+      // Clear the canvas and apply the new background color
+      ctx.fillStyle = bgColor;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    });
+  </script>
+  <!-- Canvas code ends here -->
+  
+  <br>
+  <br>
+  
+  <!-- ASCII Generation code starts here -->
+  <h4 style="font-family:Terminus; text-color:fff" class="text-center">ascii</h4>
+      <button onclick="generateRandomLetter()">ascii</button>
+    <div id="outputBox"></div>
+
+    <script>
+        function generateRandomLetter() {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-=[]\';/.,";
+            const randomLetter = letters[Math.floor(Math.random() * letters.length)];
+            document.getElementById("outputBox").textContent = randomLetter;
+        }
+    </script>
+  <!-- ASCII Generation code ends here -->
+  <br>
+  <br>
+  <!-- Notification JS code starts here -->
+  
+  <button id="notifyBtn">Send Notification</button>
+  
+  
+
+  <script>
+    const notifyBtn = document.getElementById("notifyBtn");
+
+    // Check if the browser supports notifications
+    if (!("Notification" in window)) {
+      alert("This browser does not support desktop notification");
+    } else {
+      // Ask for permission as soon as the page loads (optional)
+      if (Notification.permission === "default") {
+        Notification.requestPermission();
+      }
+    }
+
+    notifyBtn.addEventListener("click", function () {
+      // Check permission
+      if (Notification.permission === "granted") {
+        new Notification("Rue", {
+          body: "I know what you did, Ilivk.",
+          icon: "https://dogewoz.neocities.org/dogverse.vhs/rue.png" // Optional icon
+        });
+      } else if (Notification.permission === "denied") {
+        alert("Notifications are blocked. Please allow them in your browser settings.");
+      } else {
+        // If permission wasn't already granted, request it
+        Notification.requestPermission().then(permission => {
+          if (permission === "granted") {
+            new Notification("Rue", {
+              body: "Thanks.",
+              icon: "https://dogewoz.neocities.org/dogverse.vhs/rue.png"
+            });
+          }
+        });
+      }
+    });
+  </script>
+
+<!-- Notification JS code ends here -->
+  
+  
+  
+  </center>
+    <!-- Metro UI -->
+    <script src="/metro.js"></script>
+    </div>
+    </div>
+  </body>
+</html>
