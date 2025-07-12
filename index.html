@@ -278,7 +278,38 @@ h1, h2, h3, h4, h5, h6, p {
   <p style="font-family:Terminus" class="text-center">btw here is my 3DS Pretendo friend code! 4348-2549-5387</p>
     <p style="font-family:Terminus" class="text-center">anyways, this new homepage is still in the works.. so expect this to look a bit more different, and better.</p>
 	<p style="font-family:Terminus" class="text-center">i have just recently ported this website from neocities to github pages, so expect things to be off</p>
-    <a target="_blank"><img alt="visitors by country counter" border="0" src="https://smallcounter.com/online/fcc.php?id=1752300072"></a>
+	    
+    <script>
+  async function loadVisitorCounterIfNotEU() {
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      const data = await response.json();
+      const euCountries = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"];
+
+      if (!euCountries.includes(data.country)) {
+        // Create the counter image
+        const counterLink = document.createElement('a');
+        counterLink.href = "#"; // optional, since you disabled the click
+        counterLink.target = "_blank";
+
+        const counterImage = document.createElement('img');
+        counterImage.src = "https://smallcounter.com/online/fcc.php?id=1752300072";
+        counterImage.alt = "visitors by country counter";
+        counterImage.border = "0";
+
+        counterLink.appendChild(counterImage);
+        document.body.appendChild(counterLink);
+      } else {
+        console.log("Visitor is from the EU. Counter not loaded.");
+      }
+    } catch (error) {
+      console.warn("Could not determine location. Skipping visitor counter.");
+    }
+  }
+
+  loadVisitorCounterIfNotEU();
+</script>
+	    
  <a href="/abdulisnotthefatherlol"><h1 style="font-family:VCR OSD Mono; text-color:fff" class="text-center">something cool</h1></a>
     <div id="pst-time" style="font-family:Terminus"></div>
       <script>
