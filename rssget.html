@@ -4,9 +4,18 @@
   <meta charset="utf-8">
 </head>
 <body>
+<h1>dogewoz.github.io</h1>
   <div id="feed"></div>
 
   <script>
+  
+      function decodeHTML(str) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(`<!doctype html><body>${str}`, 'text/html');
+      return doc.body.textContent;
+    }
+  
+  
     fetch("https://api.rss2json.com/v1/api.json?rss_url=https://dogewoz.tumblr.com/rss")
       .then(response => response.json())
       .then(data => {
