@@ -1,19 +1,26 @@
-<div id="rss-feed"></div>
-<script>
-  const rssUrl = 'https://cors-anywhere.herokuapp.com/https://dogewoz.tumblr.com/rss.xml';
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <div id="feed"></div>
 
-  fetch(rssUrl)
-    .then(res => res.text())
-    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-    .then(data => {
-      const items = data.querySelectorAll("item");
-      let html = "<ul>";
-      items.forEach(el => {
-        const title = el.querySelector("title").textContent;
-        const link = el.querySelector("link").textContent;
-        html += `<li><a href="${link}">${title}</a></li>`;
+  <script>
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://dogewoz.tumblr.com/rss")
+      .then(response => response.json())
+      .then(data => {
+        let html = "<ul>";
+        data.items.slice(0, 5).forEach(item => {
+          html += `<li><a href="${item.link}">${item.title}</a></li>`;
+        });
+        html += "</ul>";
+        document.getElementById("feed").innerHTML = html;
+      })
+      .catch(err => {
+        console.error("RSS load failed:", err);
+        document.getElementById("feed").textContent = "Couldn't load Tumblr posts.";
       });
-      html += "</ul>";
-      document.getElementById("rss-feed").innerHTML = html;
-    });
-</script>
+  </script>
+</body>
+</html>
