@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="refresh" content="0; url='https://dogewoz.github.io/500.html'" />
+<title>dogewoz's information superhighway web-site</title>
+        <link rel="icon" type="image/x-icon" href="dogewoz.png">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+<style>
+    
+    body {
+  background-color: #000;
+}
+    
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #300D1A;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFDE29;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FFFFFF;
+}
+
+.main {
+  margin-left: 180px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: #FFDE29;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 0;
+    padding-top: 0;
+  }
+  .sidenav a {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+body {
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('fonts/VCR OSD Mono.woff2') format('woff2'),
+       url('fonts/VCR OSD Mono.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Terminus';
+  src: url('fonts/Terminus.woff2') format('woff2'),
+       url('fonts/Terminus.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+p.outset {border-style: outset;}
+h1.outset {border-style: outset;}
+h2.outset {border-style: outset;}
+h3.outset {border-style: outset;}
+h4.outset {border-style: outset;}
+h5.outset {border-style: outset;}
+h6.outset {border-style: outset;}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+    .collapsible {
+      background-color: #565656;
+      color: white;
+      cursor: pointer;
+      padding: 5px;
+      width: 25%;
+      border: none;
+      text-align: center;
+      outline: none;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+     .collapsible:hover { 
+      background-color: #565656; 
+    } 
+
+    .content {
+      padding: 0 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #565656;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+      border-radius: 0px;
+      width: 35%;
+    }
+
+    .content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 5px 0;
+    }
+    
+
+/* Content Box */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Adding a soft text shadow */
+h1, h2, h3, h4, h5, h6, p {
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+}
+
+    /* Container for the dropdown */
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Button styling */
+    .dropdown-button {
+      background: linear-gradient(to bottom, #3c0059, #7001a3);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    
+    .dropdown-button:hover {
+      background-color: rgba(0, 120, 215, 1);
+    }
+
+    /* Smaller dropdown content with Aero aesthetics */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 5px;
+      width: 200px;  /* Smaller size */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      opacity: 0; /* Make it invisible by default */
+      transition: opacity 0.3s ease; /* Smooth transition for fade effect */
+  }
+    }
+
+    /* Style for the GIFs inside the dropdown */
+    .dropdown-content img {
+      display: block;
+      width: 100%;  /* Resizes to fit */
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+</style>
+  </head>
+  <body>
+    <center><img src="gettrolled.png"></center>
+  </body>
+</html>
