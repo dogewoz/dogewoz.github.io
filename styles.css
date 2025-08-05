@@ -9,7 +9,7 @@ body {
 }
 
 
-@font-face {
+.pixel {
   font-family: 'VCR OSD Mono';
   src: url('/fonts/VCR OSD Mono.woff2') format('woff2'),
        url('fonts/VCR OSD Mono.TTF') format('truetype');
@@ -17,7 +17,7 @@ body {
   font-style: normal;
 }
 
-@font-face {
+.oneshot {
   font-family: 'Terminus';
   src: url('/fonts/Terminus.woff2') format('woff2'),
        url('/fonts/Terminus.TTF') format('truetype');
