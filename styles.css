@@ -2,7 +2,7 @@
 /* also PLEASE work */
 
 @font-face {
-  font-family: 'VCR OSD Mono', sans-serif;
+  font-family: 'VCR OSD Mono', sans-serif !important;
   src: url('/VCR OSD Mono.woff2') format('woff2'),
        url('/fonts/VCR OSD Mono.ttf') format('truetype');
   font-weight: normal;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: 'Terminus', sans-serif; 
+  font-family: 'Terminus', sans-serif !important; 
   src: url('/terminus.woff2') format('woff2'),
        url('/fonts/terminus.ttf') format('truetype');
   font-weight: bold;
@@ -28,9 +28,9 @@ body {
 
 
 .pixel {
-	font-family: 'VCR OSD Mono', sans-serif;
+	font-family: 'VCR OSD Mono', sans-serif !important;
 }
 
 .oneshot {
-	font-family: 'Terminus', sans-serif;
+	font-family: 'Terminus', sans-serif !important;
 }
