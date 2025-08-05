@@ -1,0 +1,26 @@
+body {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  font-family: Terminus;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('/fonts/VCR OSD Mono.woff2') format('woff2'),
+       url('fonts/VCR OSD Mono.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Terminus';
+  src: url('/fonts/Terminus.woff2') format('woff2'),
+       url('/fonts/Terminus.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
