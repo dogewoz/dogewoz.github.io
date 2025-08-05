@@ -26,6 +26,30 @@ body {
   color: #fff;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 200px; 
+    background-color: #25003d; 
+    padding: 10px;
+    border-right: 5px solid #fff; 
+}
+
+.collapsible {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .collapsible {
+        display: block;
+    }
+}
 
 .pixel {
 	font-family: 'VCR OSD Mono', sans-serif !important;
