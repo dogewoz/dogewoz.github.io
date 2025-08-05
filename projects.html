@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+		@font-face {
+		font-family: 'VCR OSD Mono';
+			src: url('fonts/VCR OSD Mono.woff2') format('woff2'),
+			url('fonts/VCR OSD Mono.TTF') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		}
+
+		@font-face {
+       font-family: 'Terminus';
+	   src: url('fonts/Terminus.woff2') format('woff2'),
+			url('fonts/Terminus.TTF') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		}
+      body {
+      background-image: url("/bg.png");
+      background-repeat: repeat-x;
+	  
+	  .evil-and-intimidating-box {
+	  background-color: #25003d;
+	  border: 5px solid #ffffff;
+	  padding: 15px;
+	  margin: 10px;
+	  color: #fff
+      }
+	  
+	  @media (max-width: 768px) {
+            .evil-and-intimidating-box {
+				padding: 5px;
+                margin: 1px;
+            }
+        }
+		
+		
+		.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  background-color: #440066;
+  padding: 5px;
+}
+.container > div {
+  background-color: #25003d;
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  grid-area: content;
+}
+.container > div.footer {
+  grid-area: footer;
+}
+
+.collapsible {
+    display: none;
+}
+    </style>
+<title>dogewoz's information superhighway web-site</title>
+        <link rel="icon" type="image/x-icon" href="icon.png">
+        <link rel="stylesheet" href="styles.css">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+
+
+
+</head>
+<body class="oneshot">
+
+<div class="container">
+
+
+<div class="header">
+<!-- <header> -->
+
+<div id="time"></div>
+<marquee class="pixel" scrollamount="20">dogewoz's information superhighway web-site</marquee>
+
+<!-- </header> -->
+</div>
+
+
+      <script>
+    function updatePSTTime() {
+      const options = {
+        timeZone: 'America/Los_Angeles',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true,
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+
+      const now = new Date();
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const pstTime = formatter.format(now);
+
+      document.getElementById('time').textContent = `teh time for meh: ${pstTime}`;
+    }
+
+    updatePSTTime();
+    setInterval(updatePSTTime, 1000);
+  </script>
+
+		
+<div class="menu">
+<a href="/index">homepage</a>
+<br>
+<a href="/about">about meh</a>
+<br>
+<a href="/projects">projects</a>
+</div>
+
+<div class="content">
+<h1 class="pixel">stuff that i have worked on</h1>
+<h3>youtube channel</h3>
+<p>it's where i upload dogs doing wacky and stupid shit</p>
+<p>link is in the footer below.</p>
+<h3 class="pixel">dogverse.vhs</h3>
+<p>honestly, not my greatest work.</p>
+<p>it's about this dog guy named jerry who somehow ends up in the oneshot world. it has many plot holes and it doesn't make sense.</p>
+<p>if you, for some unholy reason want to play this, it's in my itch.io page.</p>
+</div>
+
+<div class="footer">
+<a href="https://dogewoz.neocities.org"><h4>old neocities version</h4></a>
+<a href="https://www.youtube.com/@dogewoz"><h4>youtube</h4></a>
+<a href="https://dogewoz.tumblr.com"><h4>tumblr</h4></a>
+<a href="https://dogewoz.itch.io"><h4>itch.io</h4</a>
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
