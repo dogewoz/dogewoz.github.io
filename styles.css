@@ -1,3 +1,22 @@
+/* turns out you can't declare a src in a css class, well you learn something new everyday, hmmm? */
+/* also PLEASE work */
+
+@font-face {
+  font-family: 'VCR OSD Mono', sans-serif;
+  src: url('/fonts/VCR OSD Mono.woff2') format('woff2'),
+       url('/fonts/VCR OSD Mono.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Terminus', sans-serif; 
+  src: url('/fonts/Terminus.woff2') format('woff2'),
+       url('/fonts/Terminus.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -9,17 +28,9 @@ body {
 
 
 .pixel {
-  font-family: 'VCR OSD Mono', sans-serif;
-  src: url('/fonts/VCR OSD Mono.woff2') format('woff2'),
-       url('/fonts/VCR OSD Mono.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'VCR OSD Mono', sans-serif;
 }
 
 .oneshot {
-  font-family: 'Terminus', sans-serif; 
-  src: url('/fonts/Terminus.woff2') format('woff2'),
-       url('/fonts/Terminus.TTF') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+	font-family: 'Terminus', sans-serif;
 }
