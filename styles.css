@@ -9,7 +9,7 @@ body {
 
 
 .pixel {
-  font-family: 'VCR OSD Mono', sans-serif !important; /* just so mobile can actually use the frigging font, probably redundant but oh well */
+  font-family: 'VCR OSD Mono', sans-serif;
   src: url('/fonts/VCR OSD Mono.woff2') format('woff2'),
        url('/fonts/VCR OSD Mono.TTF') format('truetype');
   font-weight: normal;
@@ -17,7 +17,7 @@ body {
 }
 
 .oneshot {
-  font-family: 'Terminus', sans-serif !important ; 
+  font-family: 'Terminus', sans-serif; 
   src: url('/fonts/Terminus.woff2') format('woff2'),
        url('/fonts/Terminus.TTF') format('truetype');
   font-weight: bold;
