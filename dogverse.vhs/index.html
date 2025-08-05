@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<title>DOGVERSE.VHS</title>
+        <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+         
+    <!-- Metro UI -->
+   <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
+    <style>
+    body {
+  background-color: #000;
+}
+    
+body {
+  margin: 0;
+  font-family: Terminus;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('/fonts/VCR OSD Mono.woff2') format('woff2'),
+       url('fonts/VCR OSD Mono.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Terminus';
+  src: url('/fonts/Terminus.woff2') format('woff2'),
+       url('/fonts/Terminus.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+</style>
+
+
+
+</head>
+  <body>
+    
+        
+
+
+    
+    
+
+
+  <center>
+  <img src="banner.png" alt="DOGVERSE.VHS" style="width:auto;">
+  </center>
+  <center><h2><i><a style="font-family:VCR OSD Mono; text-color:fff" class="text-center" href="https://goobert4000.itch.io/dogversevhs">Download from itch.io... or should you?</a></i></h2></center>
+  <center>
+  <marquee behavior="scroll" direction="left" scrollamount="20"><h3>Hey! If, for some reason, itch.io doesn't like loading for you, this is the alternative site for DOGVERSE.VHS. Of course, no files or announcements are hosted here, it is only the description of the game. This version of the project page may be a little more <em>stylish...</em>       Anyways, the REAL place to get DOGVERSE.VHS is from itch.io.</h3></marquee>
+<a href="https://dogewoz.neocities.org/projcanis">Check out the upgrade to DOGVERSE.VHS here.</a>
+  <h4>for something cool to happen... enable notifications plz</h4>
+  
+    <script>
+    let notified = false;
+
+    // Ask for permission on load
+    if ("Notification" in window && Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+
+    window.addEventListener("scroll", function() {
+      const trigger = document.getElementById("trigger");
+      const triggerPosition = trigger.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      // If the top of the trigger is in the viewport and we haven't notified yet
+      if (triggerPosition < windowHeight && !notified) {
+        notified = true; // prevent multiple notifications
+
+        if (Notification.permission === "granted") {
+          new Notification("???", {
+            body: "I have something for you. https://dogewoz.neocities.org/projcanis/arg/messagefromafox",
+            icon: "https://dogewoz.neocities.org/dogverse.vhs/mysteryfox.png" // optional
+          });
+                      // Handle click
+        notification.onclick = function(event) {
+          event.preventDefault(); // prevent default behavior (just in case)
+          window.open("https://dogewoz.neocities.org/projcanis/arg/messagefromafox", "_blank");
+        };
+      }
+    }
+  });
+  </script>
+  
+
+
+
+  <button id="playButton" onclick="play()">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</button>
+
+  <script>
+    let hasPlayed = false; // Track if the audio has already been played
+    let audio; // Declare the audio variable outside the function for global scope
+
+    function play() {
+      // Prevent multiple button presses from creating new audio instances
+      if (hasPlayed) return;
+
+      hasPlayed = true; // Mark that the audio has been started
+
+      // Define the three audio URLs
+  const XMBsong = 'https://file.garden/ZzAAsw4MgBkQ6Iog/dogversevhs/audio/DOGVERSE.VHS%20Itch%20Presentation.mp3';
+  const secretsong = 'https://file.garden/ZzAAsw4MgBkQ6Iog/projcanis/audio/DOGVERSE.VHS%20OST%20-%20Title%20Screen.ogg';
+  const secretersong = 'https://file.garden/ZzAAsw4MgBkQ6Iog/dogversevhs/audio/Jerrys%20Leitmotif.mp3';
+  const supersecretsong = 'https://file.garden/ZzAAsw4MgBkQ6Iog/dogversevhs/audio/The%20Internal%20Unknown.mp3'
+
+      // Generate a random number between 0 and 1
+      const randomChance = Math.random();
+
+      // Select the audio URL based on the random number
+      let audioUrl;
+      if (randomChance < 0.3) {
+        audioUrl = XMBsong; // 33% chance for mainUrl
+      } else if (randomChance < 0.6) {
+        audioUrl = secretsong; // 33% chance for alternateUrl1
+      } else if (randomChance < 0.9) {
+        audioUrl = secretersong; // 34% chance for alternateUrl2
+      } else {
+        audioUrl = supersecretsong;
+      }
+
+      // Create an audio object with the selected URL
+      audio = new Audio(audioUrl);
+
+      // Enable looping for the audio
+      audio.loop = true;
+
+      // Play the selected audio
+      audio.play();
+
+      // Disable the button after audio starts playing
+      const button = document.getElementById('playButton');
+      button.disabled = true;
+    }
+
+    // Ensure the audio stops playing if the user navigates away or refreshes the page
+    window.addEventListener('beforeunload', () => {
+      if (audio) {
+        audio.pause();
+        audio = null; // Clean up the audio object
+      }
+    });
+  </script>
+
+ <h6>Does this webpage feel dead? Press this button for some basic XMB-esque music.</h6>
+ <h6 style="color:transparent">pssst... there's a secret. see if you can find it ;)</h6>
+ <h6 style="color:transparent">and by chance if you somehow get it first try on your load... i salute you.</h6>
+<h1 style="font-family:VCR OSD Mono; text-color:fff" class="text-center">Description from itch.io</h1>
+<h1 class="text-center">Major spoilers for Oneshot (solstice and freeware included), Undertale(?), and many, many other games.<br> </h1>
+<h3 class="text-center">Short description (and background lore)</h3>
+<p class="text-center">A dog-like being was on his way to Walmart, one way leads to another, and now he's accidentally ended up in OneShot's world.</p>
+<p class="text-center">Basically OneShot if it was a typical boring and unoriginal kusoge RPG, with nothing original about it.<br></p>
+<p class="text-center"><del>Honoring 10 years of Oneshot's original freeware release.<br></del></p>
+<p class="text-center"><sub class="text-center">is it really? you decide.<br></sub></p>
+<p class="text-center">Me and dogewoz challenged ourselves to work together and make a particularly foul, kusoge, yet at the same time perfectly fine game. This is our result. <del>I hope you enjoy.<br></del></p>
+<p class="text-center">this is really just a passion project made for fun<del><br></del>(if you have a better name for this game let us know lol)</p>
+<h1 class="text-center"> <strong>Featuring </strong></h1>
+<h2 class="text-center"><strong>A dog-like being that you control.</strong></h2>
+<p class="text-center">(named Jerry. not to be confused with Jerry from Undertale)<br></p>
+<h2 class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjQ5OTQ4LnBuZw==/original/HaZ0xn.png"></h2>
+<h2 class="text-center">Basic party system (and combat system)</h2>
+<p class="text-center">(literally just oneshot's normal party system, mixed with the standard boring rpg maker 2003 battle system)<br></p>
+<h2 class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjQ5OTk2LnBuZw==/original/RY6x3G.png"></h2>
+<h2 class="text-center">Niko and friends.</h2>
+<p class="text-center">Niko and friends. For some reason, they all can do magic, except the dog.<br></p>
+<p class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjQ5OTk1LnBuZw==/original/MpBw64.png"></p>
+<h2 class="text-center">Maps from the original 2014 release, and other worlds...</h2>
+<p class="text-center">You're no longer limited to Oneshot's world, go crazy.<br></p>
+<p class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjUwMDExLnBuZw==/original/neNumV.png"></p>
+<h2 class="text-center">Cat puns</h2>
+<p class="text-center">They're really bad, trust us.<br></p>
+<p class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjUwMDM3LnBuZw==/original/PgQOSM.png"></p>
+<h2 class="text-center">Proto? Cedric? No, they're both busy, sorry.</h2>
+<h2 class="text-center">SAVING... yeah, ironic, isn't it?</h2>
+<p class="text-center">This fangame includes SAVE files, something which Oneshot doesn't have....</p>
+<p class="text-center">(YES I AM AWARE OF BEDS IN ONESHOT, THEY DON'T COUNT.)<br></p>
+<p class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjUwMDQyLnBuZw==/original/QHBduF.png"></p>
+<h2 class="text-center">References to Undertale (and it's funny fangame sequel, Undertale 2)</h2>
+<p class="text-center">and.. most of all...<br></p>
+<h2 class="text-center">Enemies! (ranging from greek letters to other beings.)</h2>
+<p class="text-center">we're too lazy to do actual enemy sprites.<br></p>
+<p class="text-center"><img src="https://img.itch.zone/aW1nLzE1NjUwMDY1LnBuZw==/original/gZUfuB.png"></p>
+<p class="text-center">If that hasn't convinced you to download, I don't know what will!</p>
+<h1 class="text-center">Some warnings&nbsp;& notes</h1>
+<p class="text-center">This game has some profanity (not too excessive), and loud sounds (can be toggled off when you start the game). This game also has some squares, and secrets. This game may unsettle you, maybe?????<br>But one thing's for certain, this game will infuriate you.<br></p>
+<p class="text-center">Unlike Freeware Oneshot, this game cannot do anything to your computer, like changing the wallpaper, or creating documents. (I know, what a shame.)</p>
+<p class="text-center">Based off of the original 2014 freeware release of Oneshot. You don't need vanilla Oneshot to play this game, because we literally ripped it open, and harvested the files.<br></p>
+<p class="text-center">This isn't original. What'd you expect, a high quality shitpost game? We literally haven't made a game before, hence why the quality is so low. Don't worry, expect more low quality kusoge stuff from us ;)<br></p>
+<p class="text-center">I must make it clear, <em><strong>this fangame isn't canon to Oneshot's canon. This fangame is meant to stay as close to the original canon, but can assume stuff. So take the events of this game with the smallest grain of salt.<br></strong></em><em><strong><br></strong></em></p>
+<p class="text-center"><strong>It's always safe to close the game's window, that is, if you have SAVED.</strong><br></p>
+<p class="text-center"><em>For legal reasons, this is a parody fangame. <strong>A FANGAME!</strong> I don't intend on making any money off of this! OneShot is the property of Futurecat and Team Oneshot, and any other brands mentioned in this game belongs to their respective owners. I do not claim anything, nor am I trying to defame anyone or any brand. Fair use, parody law, all of that. Now please have mercy on us. Again, to reiterate, <strong>i'm not taking any money off of this, this is mostly meant as a fun hobby game.</strong> Please go support the creators of Oneshot, because they made a really coooll game. <a href="https://futurecatgames.itch.io/oneshot">Seriously, do it now.</a> If you already did, <a href="https://store.steampowered.com/app/420530/OneShot/">go do it again. buy it again for yourself, or as a nice birthday gift for a friend. Tell them to go in blind. haha purple text funny</a> If you're on a console, <a href="https://store.steampowered.com/app/2915460/OneShot_World_Machine_Edition/">it</a> <a href="https://www.nintendo.com/store/products/oneshot-world-machine-edition-switch/?_xm=171610.360095869036462149">doesn't</a> <a href="https://store.playstation.com/en-us/product/UP4127-CUSA34845_00-ONESHOTWMEUS0000?_xm=171610.360095869036462149">really</a> <a href="https://www.xbox.com/en-us/games/store/oneshot-world-machine-edition/9mx3gwkzhvtx?_xm=171610.360095869036462149">matter.</a> By order of the President of the United States of America**, you are hereby ordered to play the original game, NOW!<br></em></p>
+<p><em><br></em></p>
+<p class="text-center"><em>Now, now.<br></em></p>
+<p class="text-center"><em>There is no need to sue.<br></em></p>
+<p class="text-center"><em>Why not settle this...<br></em></p>
+<p class="text-center"><em>... over a nice cup of tea?<br></em></p>
+<p></p>
+<h1 class="text-center">Some questions you might have had, or not.</h1>
+<h3 class="text-center">Q.&nbsp;Why&nbsp;make this?</h3>
+<p class="text-center">A. We just felt like it.</p>
+<h3 class="text-center">Q. Will I receive free pancakes?</h3>
+<p class="text-center">A. Yes.</p>
+<h3 class="text-center">Q. Love it! Where can I donate?</h3>
+<p class="text-center">A. <strong>You don't</strong>. It only takes one penny to drive me into the ground.</p>
+<p class="text-center">No more questions.<br></p>
+<p class="text-center"><br></p>
+<p><br></p>
+<p><em><br></em></p>
+<p class="text-center"><em>(?) = if you count the game over easter egg as a spoiler, then yeah<br></em></p>
+<p class="text-center"><em>(**) = This is apart of a satirical joke. The President of the United States did not actually tell you to buy Oneshot. But you really should do it, even if the President didn't tell you to. Not that they were going to in the first place.</em><br></p>
+<p><br></p>
+<iframe frameborder="0" src="https://itch.io/embed/2626675?linkback=true&amp;border_width=0&amp;bg_color=170028&amp;fg_color=ffe92a&amp;link_color=5c0092&amp;border_color=573e47" width="550" height="165"><a href="https://goobert4000.itch.io/dogversevhs">DOGVERSE.VHS by goobster, dogington</a></iframe>
+<br>
+<br>
+
+
+<h3 class="text-center"><em>Windows users :</em></h3>
+<p>Unzip the ZIP file, go into the "dogverse" folder, and look for "RPG_RT.exe". This is the game executable. Without it, there would be no game.</p>
+<img height="139" width="146" title="The RPG_RT.exe executable. Run this to run the game." alt="The RPG_RT.exe executable. Run this to run the game." src="https://img.itch.zone/aW1nLzE3NDg1NjQxLnBuZw==/original/u8PSDi.png"><br>
+<h3 class="text-center"><em>Windows - If you're updating from an older version :</em></h3>
+<p>You can move your saves from the old version to the new one.<br></p>
+<ol><li>Download the new version from here.</li><li>Go into the old version's game directory, and look for *.lsd files. These are your save files.</li><li>Move all of the save files into the new version's game directory</li></ol>
+<p>If you did everything correctly, the newer version should be able to detect your old save files. <strong><em>Note : Your save may or may not carry over correctly. Don't say I didn't warn you.<br></em></strong></p>
+<p><img title="Look for this. These are your save files." alt="Look for this. These are your save files." src="https://img.itch.zone/aW1nLzE3NDg1NjU2LnBuZw==/original/z8M%2B1A.png"></p>
+
+<h3 class="text-center"><em>Android users :</em></h3>
+<p class="text-center">While it is not recommended, it is possible to play this game on Android.</p>
+<ol class="text-center"><li class="text-center">Download the ZIP file, but do not unzip it.</li>
+<p class="text-center">There are two apps you can use. <a href="https://easyrpg.org/">EasyRPG</a> and <a href="https://play.google.com/store/apps/details?id=com.retroarch">RetroArch</a>.</p>
+<h4 class="text-center">EasyRPG Instructions</h4>
+<li class="text-center">Download EasyRPG from the Play Store, and set up EasyRPG first.</li>
+<li class="text-center">Place the ZIP file in EasyRPG's "games" folder.</li>
+<h4 class="text-center">RetroArch Instructions</h4>
+<li class="text-center">Place the ZIP file in a dedicated folder. (optional)</li>
+<li class="text-center">Set up RetroArch first. Play around with the settings and theme. These instructions assume you have the XMB theme applied.</li>
+<li class="text-center">Select "Online Updater", then select "Core Downloader". It should list "RPG Maker 2000/2003 (EasyRPG). Select it, and then download it.</li>
+<li class="text-center">Go back to the main menu, and select "Load Core", then select the core you just downloaded.</li>
+<li class="text-center">Confirm that you've selected the right core. It should say "RPG Maker 2000/2003 (EasyRPG) on the bottom left corner.</li>
+<li class="text-center">Select "Load Content", and then navigate to where you saved the ZIP file. Once you've selected the ZIP file, select "Load Archive".</li>
+<li class="text-center">You should see the EasyRPG splash screen, and then a menu. Optionally, select "Settings" to adjust EasyRPG to your liking. Select "Game", then "dogverse".</li>
+<p class="text-center">You should be done. Please note this game was primarily intended for Windows, and uses the maniacs patch, which EasyRPG does not fully support at the moment.</p>
+<h4 class="text-center"><em>Android - </em><em>MIDI soundfont issue :</em></h4>
+<p>This game uses MIDI music files. On EasyRPG, they might not play without a soundfont. Here's a fix:</p>
+<ol class="text-center"><li class="text-center">Search for a MIDI soundfont. The <a href="https://musical-artifacts.com/artifacts/713">default Windows soundfont</a> is recommended, but really, any soundfont will do.</li><li class="text-center">You should now have a *.sf2 file. Place this file in EasyRPG's "soundfonts" folder.</li><li class="text-center">You're done.</li></ol>
+<h4 class="text-center"><em>Android&nbsp;-&nbsp;Updating&nbsp;from&nbsp;an older&nbsp;version&nbsp;:&nbsp;</em></h4>
+<ol class="text-center"><li class="text-center">Refer&nbsp;to step&nbsp;1 of the Android install instructions.</li><li class="text-center">Place the newly downloaded version's ZIP file into EasyRPG's "games" folder. (and run the game at least once for EasyRPG to create a saves directory for the new version)</li><li class="text-center">Go into your "saves" folder, look for the old version's directory, and look for any *.lsd files.</li><li class="text-center">Move all of these files into the new version's directory in the "saves" folder.</li></ol>
+<p class="text-center">If you did everything correctly, the new version should now pick up on your save files. Now you can play on the go on a fresh new version. Of course, who would really do that.<br></p>
+<h4 class="text-center"><em>Linux? MacOS?<br></em></h4>
+<p class="text-center"><a href="http://winehq.org">Wine.</a><br></p>
+<div id="trigger"> </div>
+<p><br></p>
+<p><br></p>
+
+</ol>
+</center>
+<p><a href="https://discord.gg/6SmjT5Pss3"><img title="discord??!?!?!?!?!?!?" alt="discord??!?!?!?!?!?!?" src="https://img.itch.zone/aW1nLzE2NTAzODg2LnBuZw==/original/vwwPun.png"></a><br></p>
+<img height="32" width="32" title="Powered by RPG Maker 2003 with Maniacs patch" alt="Powered by RPG Maker 2003 with Maniacs patch" src="/dogverse.vhs/rpg2003_MAINICON-3.png"><br>
+    <!-- Metro UI -->
+    <script src="/metro.js"></script>
+
+  </body>
+</html>

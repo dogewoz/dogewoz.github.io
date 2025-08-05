@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[COUNTDOWN.]</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+      <style>
+      @font-face * {
+  font-family: 'Terminus';
+  src: url('fonts/Terminus.woff2') format('woff2'),
+       url('fonts/Terminus.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+      
+    body {
+      font-family: Terminus, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .error-container {
+      max-width: 800px;
+      margin: 100px auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .error-header {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      background-color: #eee;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .error-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: red;
+      margin: 20px 0;
+    }
+
+    .error-message {
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    .error-footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    
+    
+  </style>
+  </head>
+  <body>
+      <div class="error-container">
+        
+        <div class="error-header"><bold><p>[Hello there.]</p></bold></div>
+            <div class="error-content">
+              <div class="error-title"><bold><p>[I'll be counting down here. Something will happen when it is done.]</p></bold></div>
+              <bold><h1 id="textcase"></h1></bold>
+                  <div class="error-footer">
+      <p>[It may get delayed.]</p>
+      <h6>[But do not worry.]</h6>
+             
+    </div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("December 8, 2026 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("textcase").innerHTML = days + " day(s) " + hours + " hour(s) "
+  + minutes + " minute(s) " + seconds + " second(s) ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("textcase").innerHTML = "null";
+  }
+}, 1000);
+</script>
+
+</div>
+
+</div>
+     <img height="32" width="32" title="Powered by RPG Maker XP, with mkxp-z engine" alt="Powered by RPG Maker XP, with mkxp-z engine" src="/dogverse.vhs/RPGXP_801-5.png"><br>
+  </body>
+</html>

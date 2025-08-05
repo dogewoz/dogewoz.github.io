@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>...</title>
+  <style>
+    body {
+      height: 25000px; /* Just for scroll testing */
+      background-color: #000000;
+      color: #fff;
+    }
+    #trigger {
+      margin-top: 2000px;
+      padding: 50px;
+      background-color: #222;
+      color: transparent;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <script>
+    // Scroll checkpoints in pixels
+    const scrollPoints = [
+      3000,
+      6000,
+      10000,
+      14000,
+      19000,
+      24000
+    ];
+
+    const messages = [
+      { title: "???", icon:"https://dogewoz.neocities.org/dogverse.vhs/mysteryfox.png", body: "Can you hear me?" },
+      { title: "???", icon:"https://dogewoz.neocities.org/dogverse.vhs/mysteryfox.png", body: "Well, if you can... might as well introduce myself." },
+      { title: "???", icon:"https://dogewoz.neocities.org/dogverse.vhs/rue.png", body: "Hi. I'm Rue. You might have seen me before somewhere." },
+      { title: "???", icon:"https://dogewoz.neocities.org/dogverse.vhs/rue.png", body: "Anyhow, keep doing what you're doing." },
+      { title: "???", icon:"https://dogewoz.neocities.org/dogverse.vhs/rue.png", body: "I've left a button at the end of the page for you." },
+      { title: "???", icon:"https://dogewoz.neocities.org/dogverse.vhs/rue.png", body: "Click on the button." }
+    ];
+
+    // Track which notifications have already been shown
+    let shownNotifications = Array(scrollPoints.length).fill(false);
+
+    // Ask for notification permission on load
+    if ("Notification" in window && Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+
+    window.addEventListener("scroll", function () {
+      const scrollY = window.scrollY;
+
+      scrollPoints.forEach((point, index) => {
+        if (scrollY >= point && !shownNotifications[index]) {
+          shownNotifications[index] = true;
+
+          if (Notification.permission === "granted") {
+            const note = new Notification(messages[index].title, {
+              body: messages[index].body,
+              icon: messages[index].icon // optional
+            });
+
+            // Optional: final notification opens a page
+            if (index === scrollPoints.length - 1) {
+              note.onclick = function (event) {
+                event.preventDefault();
+                window.open("https://example.com/secret-document.html", "_blank");
+              };
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
