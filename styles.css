@@ -27,7 +27,7 @@ body {
 }
 
 p {
-	font-size: 20px;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: bold;
 }
@@ -39,7 +39,7 @@ p {
     "menu content"
     "footer footer";
   grid-template-columns: 1fr 3fr;
-  gap: 5px;
+  gap: 8px;
   background-color: #25003d;
   padding: 5px;
 }
