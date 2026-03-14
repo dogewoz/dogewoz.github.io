@@ -26,6 +26,12 @@ body {
   color: #fff;
 }
 
+p {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+}
+
 .container {
   display: grid;
   grid-template-areas:
@@ -66,6 +72,14 @@ body {
     .collapsible {
         display: block;
     }
+	.container {
+	grid-template-areas:
+		"header"
+		"menu"
+		"content"
+		"footer";
+	grid-template-columns: 1fr;
+  }
 }
 
 .pixel {
