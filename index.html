@@ -151,7 +151,24 @@
 <a href="https://dogewoz.neocities.org"><h4>old neocities version</h4></a>
 <a href="https://www.youtube.com/@dogewoz"><h4>youtube</h4></a>
 <a href="https://dogewoz.tumblr.com"><h4>tumblr</h4></a>
-<a href="https://dogewoz.itch.io"><h4>itch.io</h4</a>
+<a href="https://dogewoz.itch.io"><h4>itch.io</h4></a>
+<br>
+<script>
+	fetch("https://api.github.com/repos/dogewoz/dogewoz.github.io/commits/rewrite")
+	.then(res => res.json())
+	.then(data => {
+		const date = new Date(data.commit.author.date);
+		const format = date.toLocaleDateString("en-US", {
+			year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit", timeZoneName: "short"
+			});
+			document.getElementById("lastupdate").textContent = format;
+			})
+			.catch(() =>  {
+			document.getElementById("lastupdate").textContent = "missingno";
+			});
+</script>
+
+<sub>last updated: <span id="lastupdate">missingno</span></sub>
 </div>
 
 </div>
